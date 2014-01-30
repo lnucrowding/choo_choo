@@ -1,8 +1,10 @@
 # ChooChoo
 
-TODO: Write a gem description
+**UNDER CONSTRUCTION**
 
 ## Installation
+
+TODO: Update instructions
 
 Add this line to your application's Gemfile:
 
