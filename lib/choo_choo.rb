@@ -1,5 +1,11 @@
 require "choo_choo/version"
 
 module ChooChoo
-  # Your code goes here...
+
+  class Say
+    def self.choo
+      return "Choo! Choo!"
+    end
+  end
+
 end
