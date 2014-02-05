@@ -19,7 +19,8 @@ Or install it yourself as:
 ## Usage
 
 
-Create a class inheriting `FeedObject` and configure what you want it to include:
+Create a class inheriting `Carriage` and configure what you want it to include,
+and a class inheriting `Train` to define how it should be collected.
 
 ```ruby
 require 'choo_choo'
