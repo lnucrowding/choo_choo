@@ -1,7 +1,5 @@
 # ChooChoo
 
-**UNDER CONSTRUCTION**
-
 ## Installation
 
 TODO: Update instructions
@@ -20,12 +18,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
 
-## Contributing
+Create a class inheriting `Carriage` and configure what you want it to include,
+and a class inheriting `Train` to define how it should be collected.
 
-1. Fork it ( http://github.com/<my-github-username>/choo_choo/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+```ruby
+require 'choo_choo'
+
+# define how the data shall be collected
+MySweeper < Train
+
+    def sweep
+        # collect the data
+    end
+
+end
+
+# define how the data is structured
+MyFeedObject < Carriage
+
+    has_many: creators
+    has_many: comments
+
+end
+```
