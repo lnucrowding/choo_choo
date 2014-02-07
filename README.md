@@ -18,6 +18,10 @@ Or install it yourself as:
 
     $ gem install choo_choo
 
+## Testing
+
+Testing is the default task in rake, just run `rake`.
+
 ## Usage
 
 TODO: Write usage instructions here
