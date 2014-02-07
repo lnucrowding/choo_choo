@@ -1,5 +1,9 @@
 # ChooChoo
 
+## About
+
+ChooChoo provides automatic activity tracking for your models in Rails 3 and 4. ChooChoo automatically caches information triggered by changes in your model, and gives you the ability to present these recorded activities to your users in a realtime activity feed.
+
 ## Installation
 
 TODO: Update instructions
