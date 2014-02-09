@@ -4,7 +4,10 @@ module ChooChoo
   class ChoochooDefaultController < ApplicationController
 
     def index
-      render :text => "Choo Choo - placeholder"
+      @posts = Post.all
+      @comments = Comment.all
+      @users = User.all
+      @public_activities = PublicActivity::Activity.order('created_at desc')
     end
 
   end
