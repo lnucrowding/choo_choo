@@ -1,27 +1,25 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'choo_choo/version'
+$:.push File.expand_path("../lib", __FILE__)
 
-Gem::Specification.new do |spec|
-  spec.name          = "choo_choo"
-  spec.version       = ChooChoo::VERSION
-  spec.authors       = ["alcesleo"]
-  spec.email         = ["lagginglion@gmail.com"]
-  spec.summary       = %q{A dynamic activity feed for your rails app.}
-  # spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+# Maintain your gem's version:
+require "choo_choo/version"
 
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+# Describe your gem and declare its dependencies:
+Gem::Specification.new do |s|
+  s.name        = "choo_choo"
+  s.version     = ChooChoo::VERSION
+  s.authors     = ["lnucrowding"]
+  s.email       = ["lagginglion@gmail.com"]
+  s.homepage    = "https://github.com/lnucrowding/choo_choo/"
+  s.summary     = "Dynamic activity feed"
+  # s.description = "TODO: Description of ChooChoo."
 
-  spec.add_runtime_dependency 'public_activity', '~> 1.4', '>= 1.4.1'
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.test_files = Dir["spec/**/*"]
 
-  spec.add_development_dependency "bundler", '~> 1.5', '>= 1.5.2'
-  spec.add_development_dependency "rake", '~> 10.1', '>= 10.1.1'
-  spec.add_development_dependency "rspec", '~> 2.14', '>= 2.14.1'
-  spec.add_development_dependency "factory_girl", '~> 4.3', '>= 4.3.0'
+  s.add_dependency "rails", "~> 4.0.2"
+
+  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "capybara"
+  s.add_development_dependency "factory_girl_rails"
 end

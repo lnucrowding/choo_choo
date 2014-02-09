@@ -1,11 +1,4 @@
-require "choo_choo/version"
+require "choo_choo/engine"
 
 module ChooChoo
-
-  class Say
-    def self.choo
-      return "Choo! Choo!"
-    end
-  end
-
 end
