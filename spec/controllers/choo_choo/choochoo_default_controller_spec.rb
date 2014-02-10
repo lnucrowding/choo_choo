@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module ChooChoo
-  describe ChoochooDefaultController do
+  describe ChooChooDefaultController do
 
   end
 end
