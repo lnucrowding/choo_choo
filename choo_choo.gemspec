@@ -7,13 +7,13 @@ require "choo_choo/version"
 Gem::Specification.new do |s|
   s.name        = "choo_choo"
   s.version     = ChooChoo::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of ChooChoo."
-  s.description = "TODO: Description of ChooChoo."
+  s.authors     = ["metsson", "alexicon79", "alcesleo"]
+  s.email       = ["merkur@live.se", "ah@alxhall.se", "lagginglion@gmail.com"]
+  s.homepage    = "https://github.com/lnucrowding/choo_choo"
+  s.summary     = "Lightweight dynamic activity feed."
+  # s.description = "TODO: Description of ChooChoo."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 3.2.16"
   # s.add_dependency "jquery-rails"
