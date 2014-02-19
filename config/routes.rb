@@ -1,3 +1,3 @@
 ChooChoo::Engine.routes.draw do
-  get '/activities/', to: 'activities#index'
+  get '/activities/', to: 'activities#index', as: 'activities'
 end
