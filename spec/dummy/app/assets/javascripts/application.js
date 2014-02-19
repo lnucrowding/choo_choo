@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require choo_choo/application
 //= require_tree .

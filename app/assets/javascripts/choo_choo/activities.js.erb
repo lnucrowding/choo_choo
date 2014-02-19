@@ -1,0 +1,9 @@
+$(function () {
+  getActivities();
+  $('body').click(getActivities);
+
+  function getActivities() {
+    // FIXME: Set default_host somewhere else
+    $.getScript('<%= activities_url host: "localhost:3000" %>')
+  }
+});
