@@ -9,8 +9,8 @@ module ChooChoo
     def after_create(record)
       # TODO: Implement listening methods
 
-      class_name = record.class.name.split(':').last
-      Carriage.create!(activity_type: 'created', excerpt: "A new #{class_name} has been created.")
+      class_name = record.class.name.split(':').last.downcase
+      Carriage.create!(activity_type: 'created', excerpt: "A new #{class_name} was created")
     end
 
   end

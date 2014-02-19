@@ -1,0 +1,8 @@
+<h1>CHOO! CHOO! CHOO!</h1>
+<ul>
+<% @activities.each do |activity| %>
+  <li><%= activity.excerpt %> <%= time_ago_in_words(activity.created_at) %> ago.</li>
+<% end %>
+</ul>
+
+<pre><%= @activities.inspect %></pre>

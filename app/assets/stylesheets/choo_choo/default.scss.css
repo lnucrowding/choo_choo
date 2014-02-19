@@ -1,0 +1,36 @@
+.default {
+  width: 60%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Helvetica";
+  font-weight: 100;
+  padding: 15px;
+  font-size: 3em;
+  color: #7fcfd6;
+}
+
+pre {
+  white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+  white-space: -pre-wrap; /* Opera */
+  white-space: -o-pre-wrap; /* Opera */
+  white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+  word-wrap: break-word; /* IE 5.5+ */
+  width: 60%;
+  border: 1px solid #ddd;
+  padding: 16px;
+  background-color: #efefef;
+  margin-top: 80px;
+}
+
+ul {
+  width: 58%;
+}
+
+li {
+  margin-left: -30px;
+  list-style: none;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
