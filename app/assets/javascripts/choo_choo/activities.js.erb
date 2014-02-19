@@ -1,3 +1,10 @@
 $(function () {
-  alert('Hello World!');
+  // FIXME: use proper url_helper
+  getActivities();
+
+  $('body').click(getActivities);
+
+  function getActivities() {
+    $.getScript('/choo_choo/activities')
+  }
 });
