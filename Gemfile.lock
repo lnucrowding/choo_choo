@@ -130,6 +130,5 @@ DEPENDENCIES
   choo_choo!
   factory_girl_rails
   jquery-rails
-  rails-timeago
   rspec-rails
   sqlite3

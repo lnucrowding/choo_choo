@@ -1,4 +1,4 @@
-# ChooChoo
+# ChooChoo [![Build Status](https://travis-ci.org/lnucrowding/choo_choo.png?branch=master)](https://travis-ci.org/lnucrowding/choo_choo)
 
 ## Installation
 
