@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.16"
   s.add_dependency "jquery-rails"
+  s.add_dependency 'rails-timeago', '~> 2.8.1'
 
   # testing
   s.add_development_dependency 'rspec-rails'
