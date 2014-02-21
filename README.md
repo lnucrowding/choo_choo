@@ -29,5 +29,13 @@ Or this in a `js`-file:
 
     //= require choo_choo/application
 
-To override the template used to render the time, create a
+
+## Usage
+
+To see a working example, you can boot up the dummy application:
+
+    cd spec/dummy
+    rails s
+
+You can override the template used to render the activities by creating a
 `app/views/choo_choo/activities/current_time.html.erb` file in the host application.
