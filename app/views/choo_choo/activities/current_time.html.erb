@@ -1,1 +1,4 @@
-<p class="timestamp"><%= Time.current %></p>
+<p class="activity">
+  <strong>This is an activity!</strong>
+  <i><span class="timestamp"><%= timeago_tag Time.zone.now  %></span></i>
+</p>
