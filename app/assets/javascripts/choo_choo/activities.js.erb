@@ -1,9 +1,15 @@
+// TODO: Support Turbolinks
 $(function () {
+  var delaySeconds = 5
   getActivities();
-  $('body').click(getActivities);
 
   function getActivities() {
-    // FIXME: Set default_host somewhere else
-    $.getScript('<%= activities_url host: "localhost:3000" %>')
+    // FIXME: Set default_host somewhere else or get url from template
+    $.getScript('<%= activities_url host: "localhost:3000" %>');
+    poll();
+  }
+
+  function poll() {
+    setTimeout(getActivities, delaySeconds * 1000);
   }
 });

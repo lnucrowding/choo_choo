@@ -28,3 +28,6 @@ And to include the javascript, either use this in an `erb`-template:
 Or this in a `js`-file:
 
     //= require choo_choo/application
+
+To override the template used to render the time, create a
+`app/views/choo_choo/activities/current_time.html.erb` file in the host application.

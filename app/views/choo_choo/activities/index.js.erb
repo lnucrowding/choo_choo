@@ -1,1 +1,1 @@
-$('body').append('<p><%= Time.now %><p>');
+$('body').append('<%= escape_javascript render template: "choo_choo/activities/current_time" %>');
