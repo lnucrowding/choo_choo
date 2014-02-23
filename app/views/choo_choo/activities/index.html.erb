@@ -1,0 +1,9 @@
+<h1>Recent activities</h1>
+  <ul>
+    <% @activities.each do |activity| %>
+    <li>
+      A <%= activity.recipient_type %> with id <%= activity.recipient_id %> was <%= activity.activity_type %> <%= time_ago_in_words(activity.created_at) %> ago.
+      <pre style="white-space:pre-wrap;"><%= activity.inspect %></pre>
+    </li>
+    <% end %>
+  </ul>
