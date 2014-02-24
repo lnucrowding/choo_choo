@@ -28,3 +28,8 @@ And to include the javascript, either use this in an `erb`-template:
 Or this in a `js`-file:
 
     //= require choo_choo/application
+
+To activate tracking of "commentable" models, add this line to any models that should be tracked:
+
+    include ChooChoo::Concerns::Commentable
+
