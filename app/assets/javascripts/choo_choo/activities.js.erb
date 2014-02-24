@@ -1,9 +1,26 @@
+// TODO: Support Turbolinks
 $(function () {
+  var delaySeconds = 30
   getActivities();
-  $('body').click(getActivities);
 
+  // Gets new activities and appends them every delaySeconds
   function getActivities() {
-    // FIXME: Set default_host somewhere else
-    $.getScript('<%= activities_url host: "localhost:3000" %>')
+    // FIXME: Set default_host somewhere else or get url from template
+    $.getScript('<%= activities_url host: "localhost:3000" %>').done(function () {
+
+      updateTimestamps();
+      poll();
+    });
+  }
+
+  function updateTimestamps() {
+    // FIXME: Does this need to be run on all of them, or just the new ones?
+    $('time[data-time-ago]').each(function() {
+      $(this).timeago();
+    });
+  }
+
+  function poll() {
+    setTimeout(getActivities, delaySeconds * 1000);
   }
 });

@@ -2,7 +2,8 @@ module ChooChoo
   class Engine < ::Rails::Engine
     isolate_namespace ChooChoo
 
-    #config.active_record.observers = 'ChooChoo::Locomotive'
+    # needs to be explicit for some reason
+    require 'rails-timeago'
 
     config.generators do |g|
       g.test_framework      :rspec,        :fixture => false

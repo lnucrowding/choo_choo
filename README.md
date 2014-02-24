@@ -1,4 +1,4 @@
-# ChooChoo
+# ChooChoo [![Build Status](https://travis-ci.org/lnucrowding/choo_choo.png?branch=master)](https://travis-ci.org/lnucrowding/choo_choo)
 
 ## Installation
 
@@ -29,7 +29,13 @@ Or this in a `js`-file:
 
     //= require choo_choo/application
 
-To activate tracking of "commentable" models, add this line to any models that should be tracked:
 
-    include ChooChoo::Concerns::Commentable
+Usage
 
+To see a working example, you can boot up the dummy application:
+
+    cd spec/dummy
+    rails s
+
+You can override the template used to render the activities by creating a
+`app/views/choo_choo/activities/current_time.html.erb` file in the host application.

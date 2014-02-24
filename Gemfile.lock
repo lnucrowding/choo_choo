@@ -4,6 +4,7 @@ PATH
     choo_choo (0.0.1)
       jquery-rails
       rails (~> 3.2.16)
+      rails-timeago (~> 2.8.1)
 
 GEM
   remote: https://rubygems.org/
@@ -81,6 +82,9 @@ GEM
       activesupport (= 3.2.17)
       bundler (~> 1.0)
       railties (= 3.2.17)
+    rails-timeago (2.8.1)
+      actionpack (>= 3.1)
+      activesupport (>= 3.1)
     railties (3.2.17)
       actionpack (= 3.2.17)
       activesupport (= 3.2.17)
