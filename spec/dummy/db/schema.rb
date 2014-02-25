@@ -11,14 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140221100201) do
+ActiveRecord::Schema.define(:version => 20140225222624) do
 
   create_table "choo_choo_carriages", :force => true do |t|
     t.string   "excerpt"
     t.string   "activity_type"
-    t.integer  "recipient_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.integer  "tracked_resource_id"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "tracked_resource_type"
+    t.string   "header"
+    t.integer  "creator_id"
   end
 
   create_table "choo_choo_locomotives", :force => true do |t|
