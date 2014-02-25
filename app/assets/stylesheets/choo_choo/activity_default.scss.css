@@ -1,0 +1,17 @@
+body {
+  font-family: "Helvetica";
+}
+
+li {
+  padding: 12px 8px 6px 8px;
+  background-color: #eee;
+  margin-left: -40px;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+pre {
+  padding: 3px;
+  background-color: #ede8ea;
+}

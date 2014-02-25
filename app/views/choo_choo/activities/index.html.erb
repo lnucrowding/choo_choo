@@ -2,7 +2,7 @@
   <ul>
     <% @activities.each do |activity| %>
     <li>
-      A <%= activity.recipient_type %> with id <%= activity.recipient_id %> was <%= activity.activity_type %> <%= time_ago_in_words(activity.created_at) %> ago.
+      The <%= activity.tracked_resource_type %> '<%= activity.header %>' with id <%= activity.tracked_resource_id %> was <%= activity.activity_type %> <%= time_ago_in_words(activity.created_at) %> ago<% if activity.creator_id.present? %> by <%= activity.creator_id %><% end %>.
       <pre style="white-space:pre-wrap;"><%= activity.inspect %></pre>
     </li>
     <% end %>
