@@ -29,8 +29,7 @@ Or this in a `js`-file:
 
     //= require choo_choo/application
 
-
-Usage
+## Usage
 
 To see a working example, you can boot up the dummy application:
 
