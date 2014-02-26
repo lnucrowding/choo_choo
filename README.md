@@ -37,6 +37,17 @@ Or this in a `js`-file:
 
     //= require choo_choo/application
 
+## Testing
+
+To run the tests, you first have to make sure it's installed properly, and then
+clone the testing database:
+
+    rake app:db:test:clone
+
+You can then run the tests with:
+
+    rspec
+
 ## Usage
 
 To see a working example, you can boot up the dummy application:
