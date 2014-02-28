@@ -1,10 +1,1 @@
-<!--
-
-# To get this code less verbal, use J instead of escape_javascript. 
-
-# And a dynamic div to append on like: $(variable).append
-Then we we can use this file on different pages/controllers
-
--->
-
-$('body').append('<%= escape_javascript render template: "choo_choo/activities/current_time" %>');
+$('body').append('<%= render_activities %>');
