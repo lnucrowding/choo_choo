@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(:version => 20140225222624) do
 
+  create_table "blogs", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "choo_choo_carriages", :force => true do |t|
     t.string   "excerpt"
     t.string   "activity_type"
