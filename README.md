@@ -7,6 +7,14 @@ Add this to your `Gemfile`:
     # since it's not a proper gem yet, pull from this repo
     gem 'choo_choo', github: 'lnucrowding/choo_choo'
 
+Install the required choo_choo migrations:
+
+    rake choo_choo:install:migrations
+
+And then run:
+
+    rake db:migrate
+
 **Optional:**
 
 You can also specify a branch, tag or even a ref:
@@ -29,6 +37,16 @@ Or this in a `js`-file:
 
     //= require choo_choo/application
 
+## Testing
+
+To run the tests, you first have to make sure it's installed properly, and then
+clone the testing database:
+
+    rake app:db:test:clone
+
+You can then run the tests with:
+
+    rspec
 
 ## Usage
 
@@ -39,3 +57,11 @@ To see a working example, you can boot up the dummy application:
 
 You can override the template used to render the activities by creating a
 `app/views/choo_choo/activities/current_time.html.erb` file in the host application.
+
+To have ChooChoo track a PARENT model in your app, add the following line to the model in question:
+
+    include ChooChoo::Concerns::Trackable::Parent
+
+To have ChooChoo track an ASSOCIATED model in your app, add the following line instead:
+
+    include ChooChoo::Concerns::Trackable::Associate

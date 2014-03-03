@@ -7,4 +7,5 @@ ChooChoo::Engine.routes.draw do
   # For example: get "activities/users/:id/", to: "activities#index"
   
   get '/activities/', to: 'activities#index', as: 'activities'
+  root :to => 'activities#index'
 end
