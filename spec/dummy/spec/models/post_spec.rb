@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Post do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "creates an activity when created" do
+    create(:post)
+    expect(ChooChoo::Carriage.count).to be 1
+  end
+
 end
