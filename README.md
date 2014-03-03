@@ -58,10 +58,13 @@ To see a working example, you can boot up the dummy application:
 You can override the template used to render the activities by creating a
 `app/views/choo_choo/activities/current_time.html.erb` file in the host application.
 
-To have ChooChoo track a PARENT model in your app, add the following line to the model in question:
+To have ChooChoo track your application's model(s), add the following line to the model in question:
 
-    include ChooChoo::Concerns::Trackable::Parent
+    include ChooChoo::Locomotive
 
-To have ChooChoo track an ASSOCIATED model in your app, add the following line instead:
+Then map your attributes to ChooChoo (also in your model):
 
-    include ChooChoo::Concerns::Trackable::Associate
+    cc_header :your_title_or_header_attribute
+    cc_excerpt :your_content_attribute
+    cc_associates :your_child_attribute, :your_second_child_attribute
+
