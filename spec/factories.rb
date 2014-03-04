@@ -1,4 +1,5 @@
 FactoryGirl.define do
+
   factory :choo_choo_carriage, :class => 'ChooChoo::Carriage' do
     activity_type "created"
     header "Post Title"
@@ -21,7 +22,4 @@ FactoryGirl.define do
     user
   end
 
-  # TODO: carriage factory
-  # factory :choo_choo_carriage do
-  # end
 end
