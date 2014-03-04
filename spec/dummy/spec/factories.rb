@@ -6,6 +6,7 @@ FactoryGirl.define do
   factory :post do
     title "Post Title"
     body "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    user
   end
 
   # TODO: carriage factory
