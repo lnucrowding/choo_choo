@@ -13,13 +13,14 @@ module ChooChoo
         @@cc_header = attr_name
       end
 
-      def self.cc_excerpt(attr_name)
+      def self.cc_excerpt(attr_name, length = 60)
         @@cc_excerpt = attr_name
+        @@cc_excerpt_length = length
       end
 
       def self.cc_associates(*attr_names)
         #TODO: try this out
-        $cc_associates = []
+        @@cc_associates = []
         attr_names.each do |attr_name|
           @@cc_associates << attr_name
         end
@@ -56,7 +57,7 @@ module ChooChoo
 
     def define_tracked_resource
       @header = self.send(@@cc_header)
-      @excerpt = self.send(@@cc_excerpt)[0...60]
+      @excerpt = self.send(@@cc_excerpt)[0...@@cc_excerpt_length]
       @tracked_resource_id = self.id
       @tracked_resource_type = self.class.name.demodulize.downcase
       @creator_id = self.user_id

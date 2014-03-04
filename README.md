@@ -68,3 +68,6 @@ Then map your attributes to ChooChoo (also in your model):
     cc_excerpt :your_content_attribute
     cc_associates :your_child_attribute, :your_second_child_attribute
 
+OPTIONS: You can specify a custom excerpt length (default is 60 characters) by adding an integer after you excerpt-attribute:
+
+    cc_excerpt :your_content_attribute, 42
