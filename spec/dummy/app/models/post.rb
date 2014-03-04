@@ -3,5 +3,8 @@ class Post < ActiveRecord::Base
 
   belongs_to :user
 
-  include ChooChoo::Concerns::Trackable::Parent
+  include ChooChoo::Locomotive
+  cc_header :title
+  cc_excerpt :body
+  cc_associates :user
 end
