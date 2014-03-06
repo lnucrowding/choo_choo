@@ -6,5 +6,5 @@ class Post < ActiveRecord::Base
   include ChooChoo::Locomotive
   cc_header :title
   cc_excerpt :body
-  cc_associates :user
+  cc_associates :comments
 end

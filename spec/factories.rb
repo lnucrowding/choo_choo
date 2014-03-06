@@ -20,6 +20,17 @@ FactoryGirl.define do
     title "Post Title"
     body "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     user
+
+    # Factory Girl Callbacks ->> http://robots.thoughtbot.com/aint-no-calla-back-girl
+    factory :post_with_comment do
+      after_create do |post|
+        create(:comment, post: post)
+      end
+    end
+  end
+
+  factory :comment do
+    entry 'Comment entry'
   end
 
 end

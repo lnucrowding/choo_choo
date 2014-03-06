@@ -62,10 +62,12 @@ module ChooChoo
       @tracked_resource_type = self.class.name.demodulize.downcase
       @creator_id = self.user_id
 
-      #TODO: allow for multiple associates?
-
+      #TODO: allow for multiple associates/children?
       @associate_resource_type = @@cc_associates[0]
-      @associate = self.send(@@cc_associates[0]).last
+
+      #TODO - QUESTION: should we divide 'associates' into 'children' & 'parent' instead?
+      #@associate = self.send(@@cc_associates[0]).last
+
     end
 
   end

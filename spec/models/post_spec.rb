@@ -19,12 +19,10 @@ describe Post do
   end
 
   it "does not create a new activity when a child is updated" do
-    create(:post)
     expect {
       create(:comment) # TODO: to that post
-    }.to_not change(Carriage, :count)
+    }.to_not change(ChooChoo::Carriage, :count)
   end
-
 
 
 end
