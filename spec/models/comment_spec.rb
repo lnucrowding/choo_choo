@@ -9,8 +9,7 @@ describe Comment do
     }.to_not change(ChooChoo::Carriage, :count).by 1
   end
 
-  it "belongs to Post"
-
-  it "belongs to User"
+  it { should belong_to(:post) }
+  it { should belong_to(:user) }
 
 end
