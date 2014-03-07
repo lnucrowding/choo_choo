@@ -56,9 +56,11 @@ To have ChooChoo track your application's model(s), add the following line to th
 
 Then map your attributes to ChooChoo (also in your model):
 
-    cc_header :your_title_or_header_attribute
-    cc_excerpt :your_content_attribute
-    cc_associates :your_child_attribute, :your_second_child_attribute
+    cc_header :your_title_or_header
+    cc_excerpt :your_content
+    cc_associates :your_child, :your_second_child
+
+These attributes can be an attribute on your model, or a method.
 
 OPTIONS: You can specify a custom excerpt length (default is 60 characters) by adding an integer after you excerpt-attribute:
 

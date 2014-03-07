@@ -3,8 +3,12 @@ class Post < ActiveRecord::Base
 
   belongs_to :user
 
+  def excerpt
+    "Custom excerpt"
+  end
+
   include ChooChoo::Locomotive
   cc_header :title
-  cc_excerpt :body
+  cc_excerpt :excerpt
   cc_associates :comments
 end
