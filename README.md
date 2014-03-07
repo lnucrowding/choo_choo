@@ -50,14 +50,6 @@ You can then run the tests with:
 
 ## Usage
 
-To see a working example, you can boot up the dummy application:
-
-    cd spec/dummy
-    rails s
-
-You can override the template used to render the activities by creating a
-`app/views/choo_choo/activities/current_time.html.erb` file in the host application.
-
 To have ChooChoo track your application's model(s), add the following line to the model in question:
 
     include ChooChoo::Locomotive
