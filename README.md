@@ -50,18 +50,18 @@ You can then run the tests with:
 
 ## Usage
 
-To see a working example, you can boot up the dummy application:
+To have ChooChoo track your application's model(s), add the following line to the model in question:
 
-    cd spec/dummy
-    rails s
+    include ChooChoo::Locomotive
 
-You can override the template used to render the activities by creating a
-`app/views/choo_choo/activities/current_time.html.erb` file in the host application.
+Then map your attributes to ChooChoo (also in your model):
 
-To have ChooChoo track a PARENT model in your app, add the following line to the model in question:
+    cc_header :your_title_or_header
+    cc_excerpt :your_content
+    cc_associates :your_child, :your_second_child
 
-    include ChooChoo::Concerns::Trackable::Parent
+These attributes can be an attribute on your model, or a method.
 
-To have ChooChoo track an ASSOCIATED model in your app, add the following line instead:
+OPTIONS: You can specify a custom excerpt length (default is 60 characters) by adding an integer after you excerpt-attribute:
 
-    include ChooChoo::Concerns::Trackable::Associate
+    cc_excerpt :your_content_attribute, 42
