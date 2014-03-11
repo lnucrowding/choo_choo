@@ -10,10 +10,7 @@ module ChooChoo
       after_update :on_update
       before_destroy :on_destroy
 
-      # has_one :activity, as: :master_event, class_name: 'ChooChoo::Activity'
-
-      # TODO: needed????
-      # has_one :activity, as: :last_event
+      has_one :activity, as: :master_event, class_name: 'ChooChoo::Activity'
     end
 
 
