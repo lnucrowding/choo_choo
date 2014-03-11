@@ -2,7 +2,7 @@ class Comment < ActiveRecord::Base
 
   # must be set to a reference this model has access to, and is a MasterEvent
   # TODO: set master somehow
-  include ChooChoo::SubEvent
+  include ChooChoo::ChildNode
 
   attr_accessible :body
 

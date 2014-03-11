@@ -1,11 +1,12 @@
 # app/models/choo_choo/concerns/master_event.rb
 module ChooChoo
 
-  module MasterEvent
+  module ParentNode
     extend ActiveSupport::Concern
 
     included do
-      # TODO: break out into base_event
+
+      # TODO: break out into base_event?
       after_create :on_create
       after_update :on_update
       before_destroy :on_destroy

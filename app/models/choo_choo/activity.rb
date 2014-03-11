@@ -1,7 +1,7 @@
 module ChooChoo
 
-  # a new activity is created when a MasterEvent is created
-  # the event_happened method is called when a SubEvent has happened
+  # a new activity is created when a ParentNode is created
+  # the event_happened method is called when a ChildNode has happened
   class Activity < ActiveRecord::Base
 
     # TODO: maybe rename to master_event_model etc...? kind of confusing

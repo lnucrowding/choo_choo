@@ -1,8 +1,10 @@
 module ChooChoo
 
   # QUESTION: Do we need a sub-event or should they be baked together somehow?
-  module SubEvent
+  module ChildNode
     extend ActiveSupport::Concern
+
+    # NOTE: This class is still very unfinished
 
     included do
       after_create :on_create

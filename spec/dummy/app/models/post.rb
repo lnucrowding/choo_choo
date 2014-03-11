@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  include ChooChoo::MasterEvent
+  include ChooChoo::ParentNode
 
   attr_accessible :body, :title, :user
 
