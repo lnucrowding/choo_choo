@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140303170331) do
+ActiveRecord::Schema.define(:version => 20140310170148) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -20,18 +20,20 @@ ActiveRecord::Schema.define(:version => 20140303170331) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "choo_choo_carriages", :force => true do |t|
-    t.string   "excerpt"
-    t.string   "activity_type"
-    t.integer  "tracked_resource_id"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
-    t.string   "tracked_resource_type"
-    t.string   "header"
-    t.integer  "creator_id"
+  create_table "choo_choo_activities", :force => true do |t|
+    t.string   "last_action"
+    t.integer  "master_event_id"
+    t.string   "master_event_type"
+    t.integer  "last_event_id"
+    t.string   "last_event_type"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
-  create_table "choo_choo_locomotives", :force => true do |t|
+  create_table "comments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.string   "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

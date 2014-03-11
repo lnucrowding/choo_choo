@@ -1,10 +1,12 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :title
+  include ChooChoo::MasterEvent
+
+  attr_accessible :body, :title, :user
 
   belongs_to :user
 
-  include ChooChoo::Locomotive
-  cc_header :title
-  cc_excerpt :body
-  cc_associates :user
+  def excerpt(max_length = 60)
+    self.body[0..60]
+  end
+
 end
