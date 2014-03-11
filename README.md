@@ -27,12 +27,40 @@ You can also specify a branch, tag or even a ref:
 
 Add this to your `routes.rb`:
 
+    # TODO: is this really needed?
     mount ChooChoo::Engine => "/choo_choo"
 
 
 ## Usage
 
-**TODO**
+In the models you wish to listen to activities for:
+
+TODO: explain child nodes when they are implemented
+
+```ruby
+# as in post.rb in the dummy app
+include ChooChoo::ParentNode
+```
+
+You need a controller like this to supply the events
+
+```ruby
+# as in activities_controller.rb in the dummy app
+class ActivitiesController < ApplicationController
+  def index
+    @activities = ChooChoo::Activity.order(updated_at: :desc)
+  end
+end
+```
+
+And to render out the activities:
+
+```erb
+<%= render 'choo_choo/activities/all' %>
+```
+
+
+
 
 ## Testing
 
