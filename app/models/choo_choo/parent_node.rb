@@ -1,4 +1,3 @@
-# app/models/choo_choo/concerns/master_event.rb
 module ChooChoo
 
   module ParentNode
@@ -11,7 +10,7 @@ module ChooChoo
       after_update :on_update
       before_destroy :on_destroy
 
-      has_one :activity, as: :master_node, class_name: 'ChooChoo::Activity'
+      has_one :activity, as: :parent_node, class_name: 'ChooChoo::Activity'
     end
 
 

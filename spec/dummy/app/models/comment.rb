@@ -4,7 +4,7 @@ class Comment < ActiveRecord::Base
   # TODO: set master somehow
   include ChooChoo::ChildNode
 
-  attr_accessible :body
+  attr_accessible :body, :user, :post
 
   belongs_to :user
   belongs_to :post

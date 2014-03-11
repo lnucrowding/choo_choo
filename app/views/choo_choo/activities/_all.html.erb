@@ -1,0 +1,15 @@
+<div>
+  <% @activities.each do |activity| %>
+    <div style="background-color: #eee">
+      <h2><%= activity.parent_node.title %></h2>
+      <strong><%= activity.parent_node.body %></strong>
+
+      <h4>Comments:</h4>
+      <ul>
+        <% activity.parent_node.comments.each do |comment| %>
+          <li><%= comment.body %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

@@ -18,11 +18,11 @@ module ChooChoo
     private
 
     def on_create
-      self.master.child_event_happened('created', self)
+      # self.master.child_event_happened('created', self)
     end
 
     def on_update(info)
-      self.master.child_event_happened('updated', self)
+      # self.master.child_event_happened('updated', self)
     end
   end
 

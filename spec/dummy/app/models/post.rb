@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
 
   attr_accessible :body, :title, :user
 
+  has_many :comments
   belongs_to :user
 
   def excerpt(max_length = 60)
