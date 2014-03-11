@@ -27,7 +27,7 @@ module ChooChoo
 
     def on_create
       # FIXME: shouldn't it know what self is anyway?
-      # self.activity.create!
+      ChooChoo::Activity.create(master_event: self)
     end
 
     def on_update
