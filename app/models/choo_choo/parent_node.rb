@@ -11,12 +11,12 @@ module ChooChoo
       after_update :on_update
       before_destroy :on_destroy
 
-      has_one :activity, as: :master_event, class_name: 'ChooChoo::Activity'
+      has_one :activity, as: :master_node, class_name: 'ChooChoo::Activity'
     end
 
 
     # called from subactivites when something has happened
-    def sub_event_happened(activity_name, model)
+    def child_event_happened(activity_name, model)
       # facade
       self.activity.event_happened(activity_name, model)
     end
@@ -24,8 +24,7 @@ module ChooChoo
     private
 
     def on_create
-      # FIXME: shouldn't it know what self is anyway?
-      ChooChoo::Activity.create(master_event: self)
+      ChooChoo::Activity.create(parent_node: self)
     end
 
     def on_update
