@@ -29,13 +29,10 @@ Add this to your `routes.rb`:
 
     mount ChooChoo::Engine => "/choo_choo"
 
-And to include the javascript, either use this in an `erb`-template:
 
-    <%= javascript_include_tag "choo_choo/application" %>
+## Usage
 
-Or this in a `js`-file:
-
-    //= require choo_choo/application
+**TODO**
 
 ## Testing
 
@@ -47,27 +44,3 @@ clone the testing database:
 You can then run the tests with:
 
     rspec
-
-## Usage
-
-To see a working example, you can boot up the dummy application:
-
-    cd spec/dummy
-    rails s
-
-You can override the template used to render the activities by creating a
-`app/views/choo_choo/activities/current_time.html.erb` file in the host application.
-
-To have ChooChoo track your application's model(s), add the following line to the model in question:
-
-    include ChooChoo::Locomotive
-
-Then map your attributes to ChooChoo (also in your model):
-
-    cc_header :your_title_or_header_attribute
-    cc_excerpt :your_content_attribute
-    cc_associates :your_child_attribute, :your_second_child_attribute
-
-OPTIONS: You can specify a custom excerpt length (default is 60 characters) by adding an integer after you excerpt-attribute:
-
-    cc_excerpt :your_content_attribute, 42
