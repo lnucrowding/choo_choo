@@ -71,4 +71,4 @@ clone the testing database:
 
 You can then run the tests with:
 
-    rspec
+    bundle exec rspec
