@@ -1,6 +1,6 @@
 module ChooChoo
 
-  # a new activity is created when a ParentNode is created
+  # A new activity is created when a ParentNode is created
   # the event_happened method is called when a ChildNode has happened
   class Activity < ActiveRecord::Base
 
@@ -9,13 +9,12 @@ module ChooChoo
 
     # TODO: db index on polymorphic fields
 
-
     belongs_to :parent_node, polymorphic: true
     belongs_to :last_updated_node, polymorphic: true
 
     after_create :on_create
 
-    # a new master is created
+    # A new master is created
     def on_create
       self.event_happened('created', self.parent_node)
     end
