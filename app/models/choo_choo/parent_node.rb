@@ -8,9 +8,8 @@ module ChooChoo
       # TODO: break out into base_event?
       after_create :on_create
       after_update :on_update
-      before_destroy :on_destroy
 
-      has_one :activity, as: :parent_node, class_name: 'ChooChoo::Activity'
+      has_one :activity, as: :parent_node, class_name: 'ChooChoo::Activity', dependent: :destroy
     end
 
 
