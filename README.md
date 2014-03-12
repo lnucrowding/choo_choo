@@ -27,15 +27,40 @@ You can also specify a branch, tag or even a ref:
 
 Add this to your `routes.rb`:
 
+    # TODO: is this really needed?
     mount ChooChoo::Engine => "/choo_choo"
 
-And to include the javascript, either use this in an `erb`-template:
 
-    <%= javascript_include_tag "choo_choo/application" %>
+## Usage
 
-Or this in a `js`-file:
+In the models you wish to listen to activities for:
 
-    //= require choo_choo/application
+TODO: explain child nodes when they are implemented
+
+```ruby
+# as in post.rb in the dummy app
+include ChooChoo::ParentNode
+```
+
+You need a controller like this to supply the events
+
+```ruby
+# as in activities_controller.rb in the dummy app
+class ActivitiesController < ApplicationController
+  def index
+    @activities = ChooChoo::Activity.order(updated_at: :desc)
+  end
+end
+```
+
+And to render out the activities:
+
+```erb
+<%= render 'choo_choo/activities/all' %>
+```
+
+
+
 
 ## Testing
 
@@ -46,22 +71,4 @@ clone the testing database:
 
 You can then run the tests with:
 
-    rspec
-
-## Usage
-
-To see a working example, you can boot up the dummy application:
-
-    cd spec/dummy
-    rails s
-
-You can override the template used to render the activities by creating a
-`app/views/choo_choo/activities/current_time.html.erb` file in the host application.
-
-To have ChooChoo track a PARENT model in your app, add the following line to the model in question:
-
-    include ChooChoo::Concerns::Trackable::Parent
-
-To have ChooChoo track an ASSOCIATED model in your app, add the following line instead:
-
-    include ChooChoo::Concerns::Trackable::Associate
+    bundle exec rspec
