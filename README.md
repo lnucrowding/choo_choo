@@ -51,7 +51,9 @@ Comment model. But you can of course add as many children as you wish.
 ```ruby
 # First, include the ChooChoo::ChildNode into comment.rb
 include ChooChoo::ChildNode
+```
 
+```ruby
 # And moving on, we need to tell this child where his parent is
 # by simply adding this line into comment.rb
 set_parent :post
@@ -60,22 +62,26 @@ set_parent :post
 So that's all you really need to for setting upp ChooChoo - a simple and lightweight activity listener for your models.
 From here you can now listen get access to your activities in your views or controller actions by the following examples.
 
-'''ruby
+```ruby
 # Get the whole related ChooChoo instance for a post
 @post.activity
-
+```
+```ruby
 # Find out what the last action for the activity was
 # This returns a string of 'created', 'updated' or 'deleted'
 # Please do note that if a parent node is deleted you will no longer have access to the activity
 @post.activity.last_action
-
+```
+```ruby
 # Get the latest changed child for the parent
 # This returns the instance of the object (child) tracked by ChooChoo
 @post.activity.last_updated_node
+```
 
-# ...you can also just access the reference id if you so wish by
+```ruby
+# You can also just access the reference id if you so wish by
 @post.activity.last_updated_node_id
-'''
+```
 
 Of course, you also have access to the timestamp columns created_at and updated_at that are updated accordingly on
 new activities. From here, you are free to customize the ChooChoo so it fits your needs or simply use the given solution
