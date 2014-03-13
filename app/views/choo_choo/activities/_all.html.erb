@@ -1,0 +1,13 @@
+<div>
+  <% @activities.each do |activity| %>
+    <div style="background-color: #eee">
+      <h2><%= activity.parent_node.title %></h2>
+      <strong><%= activity.parent_node.body %></strong>
+
+      <h4>Comments:</h4>
+      <ul>
+        <li><%= activity.last_updated_node.body %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>

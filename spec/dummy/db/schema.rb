@@ -11,27 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140225222624) do
+ActiveRecord::Schema.define(:version => 20140311120314) do
 
-  create_table "blogs", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
+  create_table "choo_choo_activities", :force => true do |t|
+    t.string   "last_action"
+    t.integer  "parent_node_id"
+    t.string   "parent_node_type"
+    t.integer  "last_updated_node_id"
+    t.string   "last_updated_node_type"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
+
+  create_table "comments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.string   "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "choo_choo_carriages", :force => true do |t|
-    t.string   "excerpt"
-    t.string   "activity_type"
-    t.integer  "tracked_resource_id"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
-    t.string   "tracked_resource_type"
-    t.string   "header"
-    t.integer  "creator_id"
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
-  create_table "choo_choo_locomotives", :force => true do |t|
+  create_table "users", :force => true do |t|
+    t.string   "username"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
