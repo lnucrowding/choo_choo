@@ -6,9 +6,7 @@
 
       <h4>Comments:</h4>
       <ul>
-        <% activity.parent_node.comments.each do |comment| %>
-          <li><%= comment.body %></li>
-        <% end %>
+        <li><%= activity.last_updated_node.body %></li>
       </ul>
     </div>
   <% end %>
