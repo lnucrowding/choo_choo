@@ -37,7 +37,7 @@ When listening for model activities through ChooCchoo you will need to set up a 
 In the example below, we will be using the dummy app found in spec/dummy to illustrate how ChooChoo works.
 
 
-The first thing to do is decide for a model that will act as a parent. Using the dummy app, we will go for
+The first thing to do is to decide for a model that will act as a parent. Using the dummy app, we will go for
 app/models/post.rb as it is a connecting point for comments and users.
 
 ```ruby
@@ -59,8 +59,8 @@ include ChooChoo::ChildNode
 set_parent :post
 ```
 
-So that's all you really need to for setting upp ChooChoo - a simple and lightweight activity listener for your models.
-From here you can now listen get access to your activities in your views or controller actions by the following examples.
+So that's all you really need for setting upp ChooChoo - a simple and lightweight activity listener for your models.
+From here you can now get access to your activities. For instance, in your views or controller actions by the following examples.
 
 ```ruby
 # Get the whole related ChooChoo instance for a post
