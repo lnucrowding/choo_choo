@@ -1,26 +1,26 @@
 module ChooChoo
-
-  # QUESTION: Do we need a sub-event or should they be baked together somehow?
   module ChildNode
     extend ActiveSupport::Concern
-
-    # NOTE: This class is still very unfinished
 
     included do
       cattr_reader :my_parent
 
+      # Callbakcs for when a model tacked by choo_choo
+      # is updated, creeated or destroyed
       after_create :on_create
       after_update :on_update
       before_destroy :on_destroy
 
+      # Defines the parent (the model where ParentNode is included)
+      # for the model to be tracked by choo_choo as a child node
       def self.set_parent(parent)
         @@my_parent = parent
       end
 
     end
 
-    # does not belong to activity
-
+    # The callback actions below are called when there is a new
+    # activity for a child node tracked by choo_choo
     private
 
     def on_create
