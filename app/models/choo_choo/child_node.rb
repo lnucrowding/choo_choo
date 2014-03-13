@@ -30,6 +30,9 @@ module ChooChoo
     def on_update
       self.send(@@my_parent).activity.event_happened('updated', self)
     end
-  end
 
+    def on_destroy
+      self.send(@@my_parent).activity.event_happened('deleted', self)
+    end
+  end
 end
