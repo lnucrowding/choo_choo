@@ -87,6 +87,17 @@ Of course, you also have access to the timestamp columns created_at and updated_
 new activities. From here, you are free to customize the ChooChoo so it fits your needs or simply use the given solution
 and make own customizations through views and helpers in your app that utilizes ChooChoo.
 
+### Events
+
+The `activity.last_action` contains a string of the last registered event like
+follows:
+
+- `created` when a parent or child is created
+- `updated` when a parent or child is updated
+- `deleted` when a **child** is deleted
+- `destroyed` when a parent is deleted (this is different because this means
+you lose the references to the models)
+
 ## Testing
 
 To run the tests, you first have to make sure it's installed properly, and then
