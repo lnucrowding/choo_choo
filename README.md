@@ -1,5 +1,9 @@
 # ChooChoo [![Build Status](https://travis-ci.org/lnucrowding/choo_choo.png?branch=master)](https://travis-ci.org/lnucrowding/choo_choo)
 
+## About
+
+ChooChoo is an application for dynamic activity tracking in Ruby On Rails. By storing information triggered by (tracked) model changes, ChooChoo will then let you reference these changes in a dynamic and highly customizable way.
+
 ## Installation
 
 Add this to your `Gemfile`:
