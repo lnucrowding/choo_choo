@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = ChooChoo::VERSION
   s.authors     = ["metsson", "alexicon79", "alcesleo"]
   s.email       = ["merkur@live.se", "ah@alxhall.se", "lagginglion@gmail.com"]
-  s.homepage    = "https://github.com/lnucrowding/choo_choo"
+  s.homepage    = "https://github.com/trackingtrain/choo_choo"
   s.summary     = "Lightweight dynamic activity feed."
   # s.description = "TODO: Description of ChooChoo."
 
