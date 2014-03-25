@@ -29,12 +29,6 @@ You can also specify a branch, tag or even a ref:
 
     gem 'choo_choo', github: 'lnucrowding/choo_choo', ref: '6c46204'
 
-Add this to your `routes.rb`:
-
-    # TODO: is this really needed?
-    mount ChooChoo::Engine => "/choo_choo"
-
-
 ## Usage
 
 When listening for model activities through ChooCchoo you will need to set up a parent-children behaviour.
