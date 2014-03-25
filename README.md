@@ -95,3 +95,10 @@ clone the testing database:
 You can then run the tests with:
 
     bundle exec rspec
+
+## Releasing
+
+To release to [rubygems](http://rubygems.org/) you first need to change the
+`version.rb` file to a new version, then run:
+
+    rake release
