@@ -85,6 +85,11 @@ follows:
 - `destroyed` when a parent is deleted (this is different because this means
 you lose the references to the models)
 
+## Contributing
+
+We would love some help on making this better, don't hesitate to send us a pull
+request.
+
 ## Testing
 
 To run the tests, you first have to make sure it's installed properly, and then
